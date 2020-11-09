@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Find from './Find';
 import './App.css';
+// import request from 'superagent';
 
 class Books extends Component {
 constructor(props) {
@@ -10,7 +11,9 @@ books: [],
 searchField: ''
 }
 }
-
+// findBook = (){
+// request.get
+// }
 handleFind = (e) => {
     console.log(e.target.value)
     this.setState({ searchField: e.target.value })
