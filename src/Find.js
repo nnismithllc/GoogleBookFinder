@@ -5,7 +5,7 @@ import './App.css';
 function Find(props) {
   return (
     <div className="search-area">
-        <form action="">
+        <form onSubmit={props.findBook} action="">
         <input onChange={props.handleFind} type="text"/>
         <button type="submit">Find</button> 
         </form>

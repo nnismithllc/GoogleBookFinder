@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Find from './Find';
 import './App.css';
-// import request from 'superagent';
+import request from 'superagent';
+import BookList from './BookList';
 
 class Books extends Component {
 constructor(props) {
@@ -11,18 +12,26 @@ books: [],
 searchField: ''
 }
 }
-// findBook = (){
-// request.get
-// }
-handleFind = (e) => {
-    console.log(e.target.value)
-    this.setState({ searchField: e.target.value })
+findBook = (e) => {
+e.preventDefault();
+request.get("https://www.googleapis.com/books/v1/volumes")
+.query({ q: this.state.searchField })
+.then ((data) => {
+  console.log(data);
+this.setState({ books: [...data.body.items]})
+})
 }
 
-  return() {
+handleFind = (e) => {
+    this.setState({ searchField: e.target.value })
+    
+}
+
+  render() {
     return (
     <div>
-    <Find handleFind={this.handleFind}/>
+    <Find findBook={this.findBook} handleFind={this.handleFind}/>
+    <BookList books={this.state.books}/>
     </div>
   );
   }
