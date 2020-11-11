@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       {/* <header className="App-header"> */}
       <Header />
+      <br></br>
       <Books />
+      <br></br>
       {/* </header> */}
     </div>
     </div>

@@ -5,14 +5,14 @@ const BookCard = (props) => {
     return(
        
     <div className="card-container" >
-        <row>
         <div className="desc">
     <img src={props.image} alt=""/>
+        <br></br>
         <h2>{props.title}</h2>
         <h3>{props.author}</h3>
-        <h4>{props.datePublished}</h4>
+        <h4>Date Published: {props.publish}</h4>
+        <br></br>
      </div>
-     </row>
      </div>
     )
     }
