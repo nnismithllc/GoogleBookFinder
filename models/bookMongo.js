@@ -7,9 +7,11 @@ const schema = new Schema({
   
     imagePath: {type:String, required:true}, 
     title: {type:String, required:true}, 
-    publish: {type:String, required:true}, 
+    description: {type:String, required:true}, 
     info: {type:String, required:true}, 
      
   });
 
-  module.exports = mongoose.model('Results', schema);
+  const Book = mongoose.model('Results', schema);
+
+  module.exports = Book;

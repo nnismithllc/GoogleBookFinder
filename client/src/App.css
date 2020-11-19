@@ -1,14 +1,16 @@
 html,body {
 height: 100%;
 background-image: url(./images/orange.jpg);
+background-color: rgb(109, 11, 11);
 
 /* background-position: center; */
 background-repeat: no-repeat;
-background-size: cover;
+background-size: auto ;
 image-rendering: initial;
 image-rendering: crisp-edges;
 /* image-rendering: pixelated; */
 }
+
 .App {
   text-align: center;
 }
@@ -87,4 +89,8 @@ div.card-container{
 button {
   height: 35px;
   margin-left: 10px;
+}
+
+.div.col {
+  display: inline;
 }
