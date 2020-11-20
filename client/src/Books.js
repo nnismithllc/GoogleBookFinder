@@ -3,7 +3,7 @@ import Find from "./Find";
 import request from "superagent";
 import BookList from "./BookList";
 import "./App.css";
-// import axios from 'axios'
+import axios from 'axios'
 
 class Books extends Component {
   constructor(props) {
@@ -34,9 +34,10 @@ class Books extends Component {
       link: bookId.volumeInfo.infoLink,
       googleid: bookId.id,
     };
-    // axios.post("/api/posts", bookData);
+    axios.post("/api/bookRoutes/", bookData)
+    .then(response => console.log (response))
     console.log(bookData);
-  };
+  }
 
   handleFind = (e) => {
     this.setState({ searchField: e.target.value });
