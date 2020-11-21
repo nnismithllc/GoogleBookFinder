@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Api from '../utils/Api';
 import Card from "../components/Card";
-import Find from "../Find";
+import Find from "../components/Find";
 import request from "superagent";
 import BookList from "../BookList";
 import "./App.css";
@@ -68,7 +68,7 @@ class Books extends Component {
 
       <div className="container">
         <Card heading="Search for a Book">
-          <SearchForm
+          <Find
             value={this.state.search}
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}

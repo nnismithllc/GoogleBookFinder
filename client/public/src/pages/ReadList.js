@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import SavedBook from "../components/SavedBook"
+import SavedPage from "../components/SavedPage"
 import Card from "../components/Card"
 
 
@@ -11,7 +11,7 @@ export default class ReadList extends Component {
     return (
       <div className="container">
         < Card heading="Saved Books List" />
-        <SavedBook />
+        <SavedPage />
       </div>
     )
   }

@@ -12,7 +12,7 @@ const BookCard = (props) => {
         <h3>{props.author}</h3>
         <h4>Description: {props.description}</h4>
         <h5>Info Link: {props.info}</h5>
-        <button onClick= {()=>props.savebook(props.id)}>Save</button>
+        <button onClick= {()=>props.SavedPage(props.id)}>Save</button>
         <br></br>
      </div>
      {/* <button type="saveBooks">Saved Books</button> */}
