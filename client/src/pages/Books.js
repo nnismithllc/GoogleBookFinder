@@ -1,3 +1,4 @@
+// React Imports for Books Components Function
 import React, { Component } from "react";
 import API from "../utils/Api";
 import Card from "../components/Card";
@@ -5,6 +6,7 @@ import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
 import JumboTron from "../components/JumboTron";
 
+// Books Component State Setup
 class Books extends Component {
   state = {
     result: {},
@@ -13,18 +15,18 @@ class Books extends Component {
     image: ""
   };
 
-  //Sets the default search upon page load
+  //Setup Search Page Load Details
   componentDidMount() {
     this.searchBooks("React");
   }
 
-  //a function to run a search of the API based on customer input
+  // Find Function Based on User Input
   searchBooks = (query) => {
     API.search(query)
       .then((res) => {
-        //sets the array of results to state
+      
         this.setState({ results: res.data.items });
-        //sets the first result object to state
+       
         this.setState({ result: res.data.items[0].volumeInfo });
         
         this.setState({ image: res.data.items[0].volumeInfo.imageLinks.thumbnail})
@@ -32,7 +34,7 @@ class Books extends Component {
       }).catch((err) => console.log(err));
   };
 
-  //
+  //Set State Upon Data Entry Change
   handleInputChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
@@ -41,13 +43,15 @@ class Books extends Component {
     });
   };
 
+  // Handles Form Search Details 
   handleFormSubmit = (event) => {
     event.preventDefault();
     this.searchBooks(this.state.search);
   };
 
   handleBookSave = (book) => {
-    
+  
+  // API Call for Book Details to SavedBook Page
     API.saveBook({
       title: book.volumeInfo.title,
       authors: book.volumeInfo.authors.join(", "),
@@ -58,6 +62,7 @@ class Books extends Component {
   };
   //
 
+  // Render Function and Display for Books Details
   render() {
     
     const searchResults = this.state.results;
@@ -81,4 +86,5 @@ class Books extends Component {
   }
 }
 
+// Export Books Function
 export default Books;

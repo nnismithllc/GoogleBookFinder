@@ -14,7 +14,7 @@ This application find books from the google book api for users to view and save 
 The programs you need to run this application is react, node.js, visual studio/other editing software, mongoose, axios, react-bootstrap, nodemon, express and heroku. 
 
 ## Usage 
-The application is used to search for books for all users by name of topic.
+The application is used to search for books by name or topic for all ages.
 
 ![image](https://user-images.githubusercontent.com/65423204/99896488-0c9c0980-2c5f-11eb-82e9-3cca3e34d2c2.png)
 

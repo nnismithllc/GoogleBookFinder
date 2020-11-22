@@ -1,3 +1,4 @@
+// React Import Components
 import React from 'react';
 import Header from './components/Header';
 import './App.css';
@@ -8,6 +9,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+// App Function for Books
 function App() {
   return (
     <Router>
@@ -35,5 +37,5 @@ function App() {
   );
 }
 
-
+// Export App Function
 export default App;

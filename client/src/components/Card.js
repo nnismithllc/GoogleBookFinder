@@ -1,5 +1,7 @@
+// React Import for Card Function
 import React from "react";
 
+// Card Function and Layout
 function Card(props) {
   return (
     <div className="card text-center">
@@ -11,4 +13,5 @@ function Card(props) {
   );
 }
 
+// Card Export Function
 export default Card;

@@ -1,5 +1,7 @@
+// React Import for Find Function
 import React from "react";
 
+// Find Function Layout
 function Find(props) {
   return (
     <form>
@@ -14,7 +16,7 @@ function Find(props) {
           placeholder="Enter a Category or Book Name"
           id="search"
         />
-
+        {/* OnClick Find Button */}
         <button
           onClick={props.handleFormSubmit}
           className="btn btn-info search-btn"
@@ -26,4 +28,5 @@ function Find(props) {
   );
 }
 
+// Export for Find Function
 export default Find;
