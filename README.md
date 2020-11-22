@@ -3,7 +3,7 @@
 ## Description 
 This application find books from the google book api for users to view and save books on mongoose for a later view.This application gives you a jumbrotron view of a book called "Fullstack React" when you first render the site. Listed beneath the header image, is a list of more books with image, title, author(s), description, year, and number of pages displayed in a row down the page. The page is set to a scroll effect to heighten the fixed background and focus the attention on the  description of each book. 
 
-## Table of Contents (Optional)
+## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -21,7 +21,7 @@ The application is used to search for books for all users by name of topic.
 
 . The objective is to check and see if the book is recent by date, who wrote it, what it's about and how many pages does the book have. Also, Viewers can go directly to the google page and view the book details for more information, or they can save the book for later view.
 
-![image](https://user-images.githubusercontent.com/65423204/99896507-4240f280-2c5f-11eb-9898-cebf05aa694e.png)
+![image](https://user-images.githubusercontent.com/65423204/99896666-a7e1ae80-2c60-11eb-95c0-4482a4f89286.png)
 
 
 ## MIT License
