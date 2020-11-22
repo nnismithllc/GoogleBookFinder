@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchForm(props) {
+function Find(props) {
   return (
     <form>
       <div className="form-group">
@@ -11,7 +11,7 @@ function SearchForm(props) {
           name="search"
           type="text"
           className="form-control book-input"
-          placeholder="Enter a book title to search for on Google Books"
+          placeholder="Enter a Category or Book Name"
           id="search"
         />
 
@@ -19,11 +19,11 @@ function SearchForm(props) {
           onClick={props.handleFormSubmit}
           className="btn btn-info search-btn"
         >
-          Search
+          Find
         </button>
       </div>
     </form>
   );
 }
 
-export default SearchForm;
+export default Find;

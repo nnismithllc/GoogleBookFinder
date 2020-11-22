@@ -15,7 +15,7 @@ class Books extends Component {
 
   //Sets the default search upon page load
   componentDidMount() {
-    this.searchBooks("The Hobbit");
+    this.searchBooks("React");
   }
 
   //a function to run a search of the API based on customer input
@@ -67,7 +67,7 @@ class Books extends Component {
     return (
 
       <div className="container">
-        <Card heading="Search for a Book">
+        <Card heading="">
           <SearchForm
             value={this.state.search}
             handleInputChange={this.handleInputChange}

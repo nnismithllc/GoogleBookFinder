@@ -32,11 +32,11 @@ function BookList(props) {
                           <td className="hide">{book.volumeInfo.pageCount}</td>
                           <td className="td">
                               <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer" className="btn btn-success list-button">
-                              View in Google Books
+                              Link to Book
                               </a>
                               <button onClick={()=>props.handleBookSave(book)} className="btn btn-info list-button"
                               >
-                              Save to reading list
+                              Save Book
                               </button>
                           </td>
                       </tr>
