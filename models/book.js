@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // This file empties the Books collection and inserts the books below
 
-const bookschema = new Schema({
+const bookSchema = new Schema({
   
     imagePath: {type:String}, 
     title: {type:String}, 
