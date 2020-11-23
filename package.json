@@ -1,35 +1,29 @@
 {
-  "name": "googlebookfinder",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0",
-    "axios": "^0.21.0",
-    "bootstrap": "^4.5.3",
-    "concurrently": "^5.3.0",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "mongod": "^2.0.0",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.10.15",
-    "nodemon": "^2.0.6",
-    "react-bootstrap": "^1.4.0",
-    "react-router-dom": "^5.2.0",
-    "superagent": "^6.1.0",
-    "web-vitals": "^0.2.4"
-  },
+  "name": "gbooksfinder",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"node server.js\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^3.1.0"
-  }
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.3.16",
+    "if-env": "^1.0.4"
+  },
+  "keywords": [],
+  "description": ""
 }
